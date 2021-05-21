@@ -19,11 +19,6 @@ app.use(fileUpload({
     useTempFiles:true
 }))
 
-
-
-
-
-
 //db
 const db = process.env.DATABASE_LOCAL
 
