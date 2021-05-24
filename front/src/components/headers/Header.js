@@ -6,7 +6,7 @@ import Cart from '../headers/icon/cart.svg'
 import { Link } from 'react-router-dom'
 
  function Header() {
-     const value = useContext(GlobalState)
+     //const value = useContext(GlobalState)
     return (
         <header>
             <div className="menu">
