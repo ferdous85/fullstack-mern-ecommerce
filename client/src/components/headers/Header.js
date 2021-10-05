@@ -7,8 +7,9 @@ import { Link } from 'react-router-dom'
 
  function Header() {
    const state = useContext(GlobalState)
-   const [isLogged, setIsLogged] = state.userAPI.isLogged
-   const [isAdmin, setIsAdmin] = state.userAPI.isAdmin
+    console.log(state);
+    const [isLogged] = state.UserAPI.isLogged
+    
     return (
         <header>
             <div className="menu">
@@ -21,7 +22,7 @@ import { Link } from 'react-router-dom'
             </div>
             <ul>
                 <li><Link to='/' >Peoducts</Link></li>
-                <li><Link to='/login' >Login</Link></li>
+                <li><Link to='/login' >Login * Register </Link></li>
                 <li>
                     <img src={Close} alt="" className='menu' width="30" />
                 </li>

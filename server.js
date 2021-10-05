@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const morgan = require('morgan')
 const mongoose = require('mongoose')
 require('dotenv').config()
 const fileUpload = require('express-fileupload')
@@ -15,6 +16,7 @@ const productRouter = require('./routes/productRouter')
 const app = express()
 
 app.use(cors())
+app.use(morgan('dev'))
 app.use(express.json())
 app.use(cookieParser())
 app.use(fileUpload({
@@ -40,7 +42,7 @@ app.use('/api', uploadRouter)
 app.use('/api', productRouter)
 
 //port
-const port = process.env.PORT || 8000
+const port = process.env.PORT || 5000
 
 app.listen(port, ()=>{
     console.log(`Server is running on ${port}`);
